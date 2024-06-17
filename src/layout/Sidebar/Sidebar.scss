@@ -1,0 +1,175 @@
+
+.sidebar {
+    padding-left: 1.7rem;
+    position: fixed;
+    overscroll-behavior: contain;
+    font-family: 'Work Sans', sans-serif;
+    overflow-y: scroll;
+    width: 15rem;
+    margin-top: 3rem;
+    height: calc(100vh - 5rem);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    z-index: 50;
+    background-color: var(--white);
+    transition: all 2s;
+    @media only screen and (max-width: 1000px) {
+        & {
+            overflow-x: hidden;
+             margin-top: 2rem;
+            animation: slideintoView 2s;
+        }
+    }
+    .sidebar-top {
+        display: flex;
+        gap: .7rem;
+        @media only screen and (max-width: 1400px) {
+            & {
+                font-size: 85%;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            & {
+                font-size: 75%;
+            }
+        }
+        span {
+            color: var(--brand-blue);
+            display: inline-block;
+        }
+    }
+}
+
+.sidebar-dashboard {
+    margin-top: 4rem;
+    color: var(--brand-blue);
+    opacity: .6;
+    p {
+        font-size: .9rem;
+        font-weight: 400;
+        margin: 0;
+        @media only screen and (max-width: 1400px) {
+            & {
+                font-size: .9rem;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            & {
+                font-size: .8rem;
+            }
+        }
+    }
+     @media only screen and (max-width: 1200px) {
+            & {
+               margin-top: 2.5rem;
+            }
+        }
+}
+
+.sidebar-links {
+    display: block;
+    h4 {
+        color: var(--brand-blue);
+        font-size: .8rem;
+        font-weight: 500;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: 1400px) {
+            & {
+                font-size: .7rem;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            & {
+                 margin-top: 2rem;
+                 margin-bottom: 1rem;
+
+            }
+        }
+    }
+    a {
+        span {
+            display: inline-block;
+        }
+    }
+}
+
+.sidebar-links-each {
+    display: flex;
+    gap: .7rem;
+  color: var(--brand-blue);
+    font-weight: 400;
+    opacity: .6;
+    font-size: .93rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    span{
+        display: flex !important;
+        align-items: center;
+    }
+    img{
+        width: 1rem;
+    }
+
+    @media only screen and (max-width: 1400px) {
+        & {
+            font-size: .87rem;
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+        & {
+            font-size: .75rem;
+        }
+    }
+}
+
+#active {
+    position: relative;
+    z-index: 20;
+    opacity: 1;
+    .sidebar-links-eaches {
+        color: var(--brand-blue) !important;
+
+    }
+}
+
+#active::before {
+    position: absolute;
+    content: '';
+    border-left: 3px solid var(--brand-green);
+    padding: 1.2rem;
+    top: -.6rem;
+    bottom: 0;
+    left: -1.7rem;
+    width:calc(15rem - 0.85rem);
+    background-color:var(--brand-light-green);
+    z-index: -20;
+}
+
+.close {
+     @media only screen and (min-width: 900px) {
+        & {
+            display: none;
+        }
+    }
+    display: block;
+    text-align: right;
+    padding-right: .4rem;
+    position: relative;
+    top: -.4rem;
+    button{
+        cursor:pointer;
+        color: var(--brand-blue);
+    }
+   
+}
+
+@keyframes slideIntoView {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}

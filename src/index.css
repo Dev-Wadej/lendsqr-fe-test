@@ -1,0 +1,40 @@
+:root {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  cursor: pointer;
+}
+
+span,
+button {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+}
+:root {
+  --brand-green: #39cdcc;
+  --brand-light-green: #e5f6f6;
+  --white: #fff;
+  --light-gray: #8d9cbd;
+  --brand-blue: #213f7d;
+}
