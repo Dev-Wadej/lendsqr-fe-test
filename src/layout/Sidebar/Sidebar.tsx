@@ -11,7 +11,7 @@ import "./Sidebar.scss"
 type Props = {
   setCloseSidebar: () => void
 }
-const Sidebar = ({ setCloseSidebar }: Props) => {
+export default function Sidebar({ setCloseSidebar }: Props) {
   return (
     <>
       {
@@ -59,5 +59,3 @@ const Sidebar = ({ setCloseSidebar }: Props) => {
     </>
   )
 }
-
-export default Sidebar
