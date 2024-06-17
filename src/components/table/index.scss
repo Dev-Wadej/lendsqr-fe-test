@@ -1,0 +1,17 @@
+.table-wrapper{
+  width: 100%;
+  overflow: auto;
+font-size: 1rem;
+border-collapse: collapse;
+}
+
+.table-header{
+  border-bottom-width: 1px;
+  color: var(--brand-blue);
+  font-weight: 400;
+}
+
+.table-body tr:last-child {
+  border-width: 0px;
+}
+

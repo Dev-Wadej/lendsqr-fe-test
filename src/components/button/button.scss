@@ -1,0 +1,148 @@
+
+
+.btn {
+  border-radius: 5px;
+  padding: 1.25rem 2rem;
+  border: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 100ms linear;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: pre;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn-small{
+  font-size:14px;
+  padding: 0.625rem 1.8rem;
+}
+.btn-medium{
+
+}
+
+/* block btns */
+.btn-block {
+  width: 100%;
+  max-width: 490px;
+}
+
+.btn-block.btn-primary {
+  background-color: var(--brand-green);
+  border: 1px solid var(--brand-green);
+  color: white;
+}
+
+.btn-block.btn-primary:hover {
+  background-color: var(--brand-green);
+  border-color: var(--brand-green);
+  opacity: 0.7;
+  color: white;
+}
+
+
+.btn-block.btn-gray {
+  background-color: #a3a3a3;
+  border: 1px solid #a3a3a3;
+  color: white;
+}
+
+.btn-block.btn-gray:hover {
+  background-color: #bdbdbd;
+  border-color: #bdbdbd;
+  color: white;
+}
+
+
+
+
+
+.btn-block:disabled {
+  background-color: #dedede;
+  border-color: #dedede;
+  color: white;
+}
+
+/* outline btns */
+.btn-outline {
+  width: 100%;
+  max-width: 490px;
+}
+
+.btn-outline.btn-primary {
+  background-color: transparent;
+  border: 1px solid #fcb6c0;
+  color: rgba(57, 205, 204, 1);
+}
+
+.btn-outline.btn-primary:hover {
+  background-color: rgba(230, 10, 43, 0.04);
+}
+
+.btn-outline.btn-gray {
+  background-color: transparent;
+  border: 1px solid #a3a3a3;
+  color: #a3a3a3;
+}
+
+.btn-outline.btn-gray:hover {
+  background-color: #bdbdbd;
+}
+
+.btn-outline:disabled {
+  background-color: #dedede;
+  border-color: #dedede;
+  color: white;
+}
+
+/* link btns */
+.btn-link {
+  padding: 0;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.btn-link:disabled {
+  background-color: transparent;
+  border-color: transparent;
+  color: unset;
+}
+
+.btn-link.btn-primary {
+  color:var(--brand-green);
+}
+
+.btn-link.btn-primary:hover {
+  color: var(--brand-green);
+  opacity: 0.7;
+}
+.btn-link.btn-brand-blue {
+  color: var(--brand-blue);
+}
+
+.btn-link.btn-brand-blue:hover {
+  color: var(--brand-blue);
+  opacity: 0.7;
+}
+
+.btn-link.btn-gray {
+  color: #a3a3a3;
+}
+
+.btn-link.btn-gray:hover {
+  color: #bdbdbd;
+}
+
+.btn-link:disabled {
+  color: #a3a3a3;
+}
+

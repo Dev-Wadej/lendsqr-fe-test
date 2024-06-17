@@ -1,0 +1,101 @@
+.users{
+  width: calc(100vw - 17rem);
+  margin-left: auto;
+  position: relative;
+  top: 1rem;
+  font-family: 'Work Sans', sans-serif;
+  h2{
+    color: var(--brand-blue);
+    font-weight: 500;
+    margin: 0;
+    padding: 2rem;
+    @media only screen and (max-width: 1200px) {
+        & {
+           padding: 1rem;
+        }
+    }
+  }
+    @media only screen and (max-width: 900px) {
+        & {
+            width: 100vw;
+        }
+    }
+}
+
+
+.users-box {
+    display: grid;
+    gap: 2rem;
+    padding: 0 1rem;
+    margin: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    li {
+        background-color: #fff;
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: .4rem;
+        padding: .5rem .6rem 1.7rem 1.5rem;
+        span {
+            display: block;
+            margin-top: .7rem;
+        }
+    }
+      @media only screen and (max-width: 1200px) {
+        & {
+              padding: 0 1rem;
+                gap: 1rem;
+        }
+    }
+ @media only screen and (max-width: 600px) {
+        & {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+}
+
+.users-box-title {
+    color: rgba(84, 95, 125, 1);
+    font-size: .9rem;
+    @media only screen and (max-width: 1400px) {
+        & {
+            font-size: .8rem;
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+        & {
+            font-size: .7rem;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        & {
+            font-size: .6rem;
+        }
+    }
+}
+
+.users-box-amount {
+    color: rgba(33, 63, 125, 1);
+    font-weight: 600;
+    font-size: 1.5rem;
+    @media only screen and (max-width: 1400px) {
+        & {
+            font-size: 1.3rem;
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+        & {
+            font-size: 1.1rem;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        & {
+            font-size: 1rem;
+        }
+    }
+}
+
+.overflow-scroll{
+    overflow: scroll;
+}
+
+
