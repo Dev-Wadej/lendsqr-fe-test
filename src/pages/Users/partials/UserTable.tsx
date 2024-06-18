@@ -11,21 +11,14 @@ import dropDown from "@/assets/svgs/dropdown.svg"
 import useFetch from "@/hooks/useFetch"
 import { QueryUserRes } from "@/models/user"
 import Progressbar from "@/components/progress-bar"
-import StatusBadge from "./StatusBadge"
+import StatusBadge from "@/components/status-badge"
 
-import "./index.scss"
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/pagination"
+import "../components/index.scss"
+
 import usePagination from "@/hooks/usePaginate"
-import UserTableAction from "./UserTableActions"
-import UserFormFilter from "./UserFormFilter"
+import UserTableAction from "../components/UserTableActions"
+import UserFormFilter from "../components/UserFormFilter"
+import UserPagination from "../components/UserPagination"
 
 const headerText = [
   "ORGANIZATION",
@@ -37,7 +30,6 @@ const headerText = [
   "",
 ]
 
-const numberPerpage = 9
 export default function UserTable() {
   const { data, loading } = useFetch<QueryUserRes>()
 
@@ -48,24 +40,10 @@ export default function UserTable() {
 
   const users = useMemo(() => data ?? [], [data])
 
-  const {
-    firstContentIndex,
-    gaps,
-    lastContentIndex,
-    nextPage,
-    page,
-    prevPage,
-    setPage,
-    totalPages,
-  } = usePagination({
+  const { firstContentIndex, lastContentIndex } = usePagination({
     contentPerPage: 9,
     count: users?.length,
   })
-
-  const jumpTopageArray = Array.from(
-    { length: Math.floor(users?.length / numberPerpage) },
-    () => numberPerpage
-  )
 
   if (loading)
     return (
@@ -141,83 +119,8 @@ export default function UserTable() {
           </TableBody>
         </Table>
       </div>
-      <div className="user-table-footer">
-        <div className="pagination">
-          <span>Showing</span>
-          <span>
-            <select
-              name="Show More"
-              id="pagination"
-              onChange={(e) => {
-                setPage(Number(e.target.value))
-              }}
-            >
-              {jumpTopageArray.map((userNum, idx) => (
-                <option value={idx + 1}>{userNum * (idx + 1)}</option>
-              ))}
-            </select>
-          </span>
-          <span>out of {users?.length}</span>
-        </div>
-        <Pagination>
-          <PaginationContent className="pagination-wrapper">
-            <PaginationItem>
-              <PaginationPrevious
-                onClick={prevPage}
-                className={`${page === 1 ? "active-icon" : "inactive-icon"}`}
-                disabled={page === 1}
-              />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink
-                className={`${page === 1 ? "active" : ""}`}
-                onClick={() => setPage(1)}
-                disabled={page === 1}
-              >
-                1
-              </PaginationLink>
-            </PaginationItem>
-            {gaps.before ? (
-              <PaginationItem>
-                <PaginationLink>{<PaginationEllipsis />}</PaginationLink>
-              </PaginationItem>
-            ) : null}
-            {gaps.paginationGroup.map((el) => (
-              <PaginationLink
-                onClick={() => setPage(el)}
-                key={el}
-                className={`page ${page === el ? "active" : ""}`}
-              >
-                {el}
-              </PaginationLink>
-            ))}
-            {gaps.after ? (
-              <PaginationItem>
-                <PaginationLink>{<PaginationEllipsis />}</PaginationLink>
-              </PaginationItem>
-            ) : null}
 
-            <PaginationItem>
-              <PaginationLink
-                disabled={page === totalPages}
-                onClick={() => setPage(totalPages)}
-              >
-                {totalPages}
-              </PaginationLink>
-            </PaginationItem>
-
-            <PaginationItem>
-              <PaginationNext
-                className={`${
-                  page === totalPages ? "active-icon" : "inactive-icon"
-                }`}
-                onClick={nextPage}
-                disabled={page === totalPages}
-              />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
-      </div>
+      <UserPagination dataLength={users?.length} />
     </section>
   )
 }
