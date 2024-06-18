@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-type Gap = {
+export type Gap = {
   before: boolean
   paginationGroup: number[]
   after: boolean
