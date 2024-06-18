@@ -8,7 +8,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/pagination"
-import usePagination, { Gap } from "@/hooks/usePaginate"
+import { Gap } from "@/hooks/usePaginate"
 
 type Props = {
   dataLength: number
