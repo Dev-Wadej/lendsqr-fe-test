@@ -100,8 +100,8 @@
     gap: .7rem;
   color: var(--brand-blue);
     font-weight: 400;
-    opacity: .6;
-    font-size: .93rem;
+    opacity: .7;
+    font-size: .95rem;
     align-items: center;
     margin-bottom: 1.5rem;
     span{
@@ -112,16 +112,16 @@
         width: 1rem;
     }
 
-    @media only screen and (max-width: 1400px) {
-        & {
-            font-size: .87rem;
-        }
-    }
-    @media only screen and (max-width: 1200px) {
-        & {
-            font-size: .75rem;
-        }
-    }
+    // @media only screen and (max-width: 1400px) {
+    //     & {
+    //         font-size: .87rem;
+    //     }
+    // }
+    // @media only screen and (max-width: 1200px) {
+    //     & {
+    //         font-size: .75rem;
+    //     }
+    // }
 }
 
 #active {
