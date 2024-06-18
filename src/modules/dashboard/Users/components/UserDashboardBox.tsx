@@ -1,5 +1,3 @@
-import React, { ReactElement, ReactNode } from "react"
-
 type Props = {
   icon: string
   name: string
