@@ -24,16 +24,7 @@
     .sidebar-top {
         display: flex;
         gap: .7rem;
-        @media only screen and (max-width: 1400px) {
-            & {
-                font-size: 85%;
-            }
-        }
-        @media only screen and (max-width: 1200px) {
-            & {
-                font-size: 75%;
-            }
-        }
+       
         span {
             color: var(--brand-blue);
             display: inline-block;
@@ -46,19 +37,10 @@
     color: var(--brand-blue);
     opacity: .6;
     p {
-        font-size: .9rem;
+        // font-size: .9rem;
         font-weight: 400;
         margin: 0;
-        @media only screen and (max-width: 1400px) {
-            & {
-                font-size: .9rem;
-            }
-        }
-        @media only screen and (max-width: 1200px) {
-            & {
-                font-size: .8rem;
-            }
-        }
+       
     }
      @media only screen and (max-width: 1200px) {
             & {
@@ -75,11 +57,7 @@
         font-weight: 500;
         margin-top: 3rem;
         margin-bottom: 2rem;
-        @media only screen and (max-width: 1400px) {
-            & {
-                font-size: .7rem;
-            }
-        }
+      
         @media only screen and (max-width: 1200px) {
             & {
                  margin-top: 2rem;
@@ -111,17 +89,6 @@
     img{
         width: 1rem;
     }
-
-    // @media only screen and (max-width: 1400px) {
-    //     & {
-    //         font-size: .87rem;
-    //     }
-    // }
-    // @media only screen and (max-width: 1200px) {
-    //     & {
-    //         font-size: .75rem;
-    //     }
-    // }
 }
 
 #active {

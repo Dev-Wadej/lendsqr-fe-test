@@ -56,21 +56,6 @@
 .users-box-title {
     color: rgba(84, 95, 125, 1);
     font-size: .9rem;
-    @media only screen and (max-width: 1400px) {
-        & {
-            font-size: .8rem;
-        }
-    }
-    @media only screen and (max-width: 1200px) {
-        & {
-            font-size: .7rem;
-        }
-    }
-    @media only screen and (max-width: 1000px) {
-        & {
-            font-size: .6rem;
-        }
-    }
 }
 
 .users-box-amount {
