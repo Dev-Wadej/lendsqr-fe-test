@@ -1,3 +1,2 @@
-import React from "react";
 import "./users.scss";
-export default function Users(): React.JSX.Element;
+export default function Users(): import("react/jsx-runtime").JSX.Element;

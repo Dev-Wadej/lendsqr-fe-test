@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from "react";
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useMemo, useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from "@/components/table";
 import dropDown from "@/assets/svgs/dropdown.svg";
 import useFetch from "@/hooks/useFetch";
@@ -32,54 +33,11 @@ export default function UserTable() {
     }), firstContentIndex = _f.firstContentIndex, gaps = _f.gaps, lastContentIndex = _f.lastContentIndex, nextPage = _f.nextPage, page = _f.page, prevPage = _f.prevPage, setPage = _f.setPage, totalPages = _f.totalPages;
     var jumpTopageArray = Array.from({ length: Math.floor((users === null || users === void 0 ? void 0 : users.length) / numberPerpage) }, function () { return numberPerpage; });
     if (loading)
-        return (React.createElement("div", { className: "loading" },
-            React.createElement(Progressbar, null)));
-    return (React.createElement("section", null,
-        React.createElement("div", { className: "user-table-wrapper relative overflow-scroll" },
-            showFilterForm && (React.createElement(UserFormFilter, { closeModal: function () { return setShowFilterForm(false); } })),
-            React.createElement(Table, null,
-                React.createElement(TableHeader, null,
-                    React.createElement(TableRow, null, headerText.map(function (header, idx) { return (React.createElement(TableHead, { key: header, className: "" },
-                        React.createElement("button", { className: "user-table-header p-8 ".concat(idx === 3 || idx === 4 ? "w-sm" : ""), onClick: function () { return setShowFilterForm(function (prev) { return !prev; }); } },
-                            header,
-                            header && React.createElement("img", { src: dropDown, alt: "Icon" })))); }))),
-                React.createElement(TableBody, null, (_a = users === null || users === void 0 ? void 0 : users.slice(firstContentIndex, lastContentIndex)) === null || _a === void 0 ? void 0 : _a.map(function (user) { return (React.createElement(TableRow, { key: user.id, className: "user-table-row" },
-                    React.createElement(TableCell, { className: "user-table-cell p-5" }, user.orgName),
-                    React.createElement(TableCell, { className: "user-table-cell p-5" }, user.userName),
-                    React.createElement(TableCell, { className: "user-table-cell p-5" }, user.email),
-                    React.createElement(TableCell, { className: "user-table-cell p-5" }, user.phoneNumber),
-                    React.createElement(TableCell, { className: "user-table-cell p-5" }, new Date(user.createdAt).toLocaleString("en-US")),
-                    React.createElement(TableCell, { className: "user-table-cell p-5" },
-                        React.createElement(StatusBadge, null)),
-                    React.createElement(TableCell, { className: "user-table-cell p-5 relative" },
-                        React.createElement("button", { className: "rotate-90", onClick: function () {
-                                setOpenTbleAction(function (prev) { return !prev; });
-                                setClickedRowId(user === null || user === void 0 ? void 0 : user.id);
-                            } }, "..."),
-                        opeTableAction && user.id === clickedRowId && (React.createElement(UserTableAction, { closeModal: function () { return setOpenTbleAction(false); }, id: user === null || user === void 0 ? void 0 : user.id }))))); })))),
-        React.createElement("div", { className: "user-table-footer" },
-            React.createElement("div", { className: "pagination" },
-                React.createElement("span", null, "Showing"),
-                React.createElement("span", null,
-                    React.createElement("select", { name: "Show More", id: "pagination", onChange: function (e) {
-                            setPage(Number(e.target.value));
-                        } }, jumpTopageArray.map(function (userNum, idx) { return (React.createElement("option", { value: idx + 1 }, userNum * (idx + 1))); }))),
-                React.createElement("span", null,
-                    "out of ", users === null || users === void 0 ? void 0 :
-                    users.length)),
-            React.createElement(Pagination, null,
-                React.createElement(PaginationContent, { className: "pagination-wrapper" },
-                    React.createElement(PaginationItem, null,
-                        React.createElement(PaginationPrevious, { onClick: prevPage, className: "".concat(page === 1 ? "active-icon" : "inactive-icon"), disabled: page === 1 })),
-                    React.createElement(PaginationItem, null,
-                        React.createElement(PaginationLink, { className: "".concat(page === 1 ? "active" : ""), onClick: function () { return setPage(1); }, disabled: page === 1 }, "1")),
-                    gaps.before ? (React.createElement(PaginationItem, null,
-                        React.createElement(PaginationLink, null, React.createElement(PaginationEllipsis, null)))) : null,
-                    gaps.paginationGroup.map(function (el) { return (React.createElement(PaginationLink, { onClick: function () { return setPage(el); }, key: el, className: "page ".concat(page === el ? "active" : "") }, el)); }),
-                    gaps.after ? (React.createElement(PaginationItem, null,
-                        React.createElement(PaginationLink, null, React.createElement(PaginationEllipsis, null)))) : null,
-                    React.createElement(PaginationItem, null,
-                        React.createElement(PaginationLink, { disabled: page === totalPages, onClick: function () { return setPage(totalPages); } }, totalPages)),
-                    React.createElement(PaginationItem, null,
-                        React.createElement(PaginationNext, { className: "".concat(page === totalPages ? "active-icon" : "inactive-icon"), onClick: nextPage, disabled: page === totalPages })))))));
+        return (_jsx("div", { className: "loading", children: _jsx(Progressbar, {}) }));
+    return (_jsxs("section", { children: [_jsxs("div", { className: "user-table-wrapper relative overflow-scroll", children: [showFilterForm && (_jsx(UserFormFilter, { closeModal: function () { return setShowFilterForm(false); } })), _jsxs(Table, { children: [_jsx(TableHeader, { children: _jsx(TableRow, { children: headerText.map(function (header, idx) { return (_jsx(TableHead, { className: "", children: _jsxs("button", { className: "user-table-header p-8 ".concat(idx === 3 || idx === 4 ? "w-sm" : ""), onClick: function () { return setShowFilterForm(function (prev) { return !prev; }); }, children: [header, header && _jsx("img", { src: dropDown, alt: "Icon" })] }) }, header)); }) }) }), _jsx(TableBody, { children: (_a = users === null || users === void 0 ? void 0 : users.slice(firstContentIndex, lastContentIndex)) === null || _a === void 0 ? void 0 : _a.map(function (user) { return (_jsxs(TableRow, { className: "user-table-row", children: [_jsx(TableCell, { className: "user-table-cell p-5", children: user.orgName }), _jsx(TableCell, { className: "user-table-cell p-5", children: user.userName }), _jsx(TableCell, { className: "user-table-cell p-5", children: user.email }), _jsx(TableCell, { className: "user-table-cell p-5", children: user.phoneNumber }), _jsx(TableCell, { className: "user-table-cell p-5", children: new Date(user.createdAt).toLocaleString("en-US") }), _jsx(TableCell, { className: "user-table-cell p-5", children: _jsx(StatusBadge, {}) }), _jsxs(TableCell, { className: "user-table-cell p-5 relative", children: [_jsx("button", { className: "rotate-90", id: "status", onClick: function () {
+                                                        setOpenTbleAction(function (prev) { return !prev; });
+                                                        setClickedRowId(user === null || user === void 0 ? void 0 : user.id);
+                                                    }, children: "..." }), opeTableAction && user.id === clickedRowId && (_jsx(UserTableAction, { closeModal: function () { return setOpenTbleAction(false); }, id: user === null || user === void 0 ? void 0 : user.id }))] })] }, user.id)); }) })] })] }), _jsxs("div", { className: "user-table-footer", children: [_jsxs("div", { className: "pagination", children: [_jsx("span", { children: "Showing" }), _jsx("span", { children: _jsx("select", { name: "Show More", id: "pagination", onChange: function (e) {
+                                        setPage(Number(e.target.value));
+                                    }, children: jumpTopageArray.map(function (userNum, idx) { return (_jsx("option", { value: idx + 1, children: userNum * (idx + 1) })); }) }) }), _jsxs("span", { children: ["out of ", users === null || users === void 0 ? void 0 : users.length] })] }), _jsx(Pagination, { children: _jsxs(PaginationContent, { className: "pagination-wrapper", children: [_jsx(PaginationItem, { children: _jsx(PaginationPrevious, { onClick: prevPage, className: "".concat(page === 1 ? "active-icon" : "inactive-icon"), disabled: page === 1 }) }), _jsx(PaginationItem, { children: _jsx(PaginationLink, { className: "".concat(page === 1 ? "active" : ""), onClick: function () { return setPage(1); }, disabled: page === 1, children: "1" }) }), gaps.before ? (_jsx(PaginationItem, { children: _jsx(PaginationLink, { children: _jsx(PaginationEllipsis, {}) }) })) : null, gaps.paginationGroup.map(function (el) { return (_jsx(PaginationLink, { onClick: function () { return setPage(el); }, className: "page ".concat(page === el ? "active" : ""), children: el }, el)); }), gaps.after ? (_jsx(PaginationItem, { children: _jsx(PaginationLink, { children: _jsx(PaginationEllipsis, {}) }) })) : null, _jsx(PaginationItem, { children: _jsx(PaginationLink, { disabled: page === totalPages, onClick: function () { return setPage(totalPages); }, children: totalPages }) }), _jsx(PaginationItem, { children: _jsx(PaginationNext, { className: "".concat(page === totalPages ? "active-icon" : "inactive-icon"), onClick: nextPage, disabled: page === totalPages }) })] }) })] })] }));
 }

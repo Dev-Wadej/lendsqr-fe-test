@@ -121,6 +121,7 @@ export default function UserTable() {
                 <TableCell className="user-table-cell p-5 relative">
                   <button
                     className="rotate-90"
+                    id="status"
                     onClick={() => {
                       setOpenTbleAction((prev) => !prev)
                       setClickedRowId(user?.id)

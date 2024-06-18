@@ -1,3 +1,2 @@
-import React from "react";
 import "./index.scss";
-export default function StatusBadge(): React.JSX.Element;
+export default function StatusBadge(): import("react/jsx-runtime").JSX.Element;

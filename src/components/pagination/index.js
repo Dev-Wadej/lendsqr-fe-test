@@ -20,46 +20,43 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import * as React from "react";
 import greaterthan from "@/assets/svgs/greaterthan.svg";
 import "./index.scss";
 var Pagination = function (_a) {
     var className = _a.className, props = __rest(_a, ["className"]);
-    return (React.createElement("nav", __assign({ role: "navigation", "aria-label": "pagination", className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
+    return (_jsx("nav", __assign({ role: "navigation", "aria-label": "pagination", className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
 };
 Pagination.displayName = "Pagination";
 var PaginationContent = React.forwardRef(function (_a, ref) {
     var className = _a.className, props = __rest(_a, ["className"]);
-    return (React.createElement("ul", __assign({ ref: ref, className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
+    return (_jsx("ul", __assign({ ref: ref, className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
 });
 PaginationContent.displayName = "PaginationContent";
 var PaginationItem = React.forwardRef(function (_a, ref) {
     var className = _a.className, props = __rest(_a, ["className"]);
-    return (React.createElement("li", __assign({ ref: ref, className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
+    return (_jsx("li", __assign({ ref: ref, className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
 });
 PaginationItem.displayName = "PaginationItem";
 var PaginationLink = function (_a) {
     var className = _a.className, isActive = _a.isActive, props = __rest(_a, ["className", "isActive"]);
-    return (React.createElement("button", __assign({ "aria-current": isActive ? "page" : undefined, className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
+    return (_jsx("button", __assign({ "aria-current": isActive ? "page" : undefined, className: "".concat(className !== null && className !== void 0 ? className : "") }, props)));
 };
 PaginationLink.displayName = "PaginationLink";
 var PaginationPrevious = function (_a) {
     var className = _a.className, props = __rest(_a, ["className"]);
-    return (React.createElement(PaginationLink, __assign({ "aria-label": "Go to previous page", className: "".concat(className !== null && className !== void 0 ? className : "") }, props),
-        React.createElement("img", { src: greaterthan, className: "rotate", alt: "icon" }),
-        " "));
+    return (_jsxs(PaginationLink, __assign({ "aria-label": "Go to previous page", className: "".concat(className !== null && className !== void 0 ? className : "") }, props, { children: [_jsx("img", { src: greaterthan, className: "rotate", alt: "icon" }), " "] })));
 };
 PaginationPrevious.displayName = "PaginationPrevious";
 var PaginationNext = function (_a) {
     var className = _a.className, props = __rest(_a, ["className"]);
-    return (React.createElement(PaginationLink, __assign({ "aria-label": "Go to next page", className: "".concat(className !== null && className !== void 0 ? className : "") }, props),
-        React.createElement("img", { src: greaterthan, alt: "icon" })));
+    return (_jsx(PaginationLink, __assign({ "aria-label": "Go to next page", className: "".concat(className !== null && className !== void 0 ? className : "") }, props, { children: _jsx("img", { src: greaterthan, alt: "icon" }) })));
 };
 PaginationNext.displayName = "PaginationNext";
 var PaginationEllipsis = function (_a) {
     var className = _a.className, props = __rest(_a, ["className"]);
-    return (React.createElement("span", __assign({ "aria-hidden": true, className: "".concat(className !== null && className !== void 0 ? className : "") }, props),
-        React.createElement("button", null, "...")));
+    return (_jsx("span", __assign({ "aria-hidden": true, className: "".concat(className !== null && className !== void 0 ? className : "") }, props, { children: _jsx("button", { children: "..." }) })));
 };
 PaginationEllipsis.displayName = "PaginationEllipsis";
 export { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, };

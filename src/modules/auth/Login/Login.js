@@ -9,13 +9,14 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import "./login.scss";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import companyLogo from "@/assets/svgs/companyLogo.svg";
 import loginIllustrator from "@/assets/images/loginPage.jpg";
 import { Button } from "@/components/button";
-var navigate_to = "/dashboard/user";
+var navigate_to = "/dashboard/users";
 var Login = function () {
     var navigate = useNavigate();
     var _a = useState({ password: "", email: "" }), formDetails = _a[0], setFormDetails = _a[1];
@@ -49,24 +50,6 @@ var Login = function () {
             return (__assign(__assign({}, prev), (_a = {}, _a[name] = true, _a)));
         });
     };
-    return (React.createElement("div", { className: "login-page" },
-        React.createElement("section", null,
-            React.createElement("img", { src: companyLogo, alt: "company's logo" }),
-            React.createElement("div", { className: "login-img" },
-                React.createElement("img", { src: loginIllustrator, alt: "Sign in Page Illustrator" }))),
-        React.createElement("section", null,
-            React.createElement("form", { className: "login-typography", onSubmit: handleFormSubmit },
-                React.createElement("h1", null, "Welcome!"),
-                React.createElement("h5", null, "Enter details to login"),
-                React.createElement("input", { type: "email", placeholder: "Email", name: "email", onChange: handleFormOnChange }),
-                !formStateStatus.email && (React.createElement("p", { className: "email-validator" }, "Email is required")),
-                React.createElement("div", { className: "show-password" },
-                    React.createElement("input", { name: "password", type: showPassword ? "text" : "password", placeholder: "Password", onChange: handleFormOnChange, value: formDetails.password }),
-                    React.createElement(Button, { size: "small", variant: "link", color: "primary", type: "button", onClick: function () { return setShowPassword(function (prev) { return !prev; }); } },
-                        showPassword ? "HIDE" : "SHOW",
-                        " ")),
-                !formStateStatus.password && (React.createElement("p", { className: "password-validator" }, "Enter an password")),
-                React.createElement(Button, { size: "small", variant: "link", color: "primary", type: "button", className: "forgot-password" }, "FORGOT PASSWORD?"),
-                React.createElement(Button, { onClick: handleFormSubmit, color: "primary", size: "small", type: "submit", variant: "block" }, "LOG IN")))));
+    return (_jsxs("div", { className: "login-page", children: [_jsxs("section", { children: [_jsx("img", { src: companyLogo, alt: "company's logo" }), _jsx("div", { className: "login-img", children: _jsx("img", { src: loginIllustrator, alt: "Sign in Page Illustrator" }) })] }), _jsx("section", { children: _jsxs("form", { className: "login-typography", onSubmit: handleFormSubmit, children: [_jsx("h1", { children: "Welcome!" }), _jsx("h5", { children: "Enter details to login" }), _jsx("input", { type: "email", placeholder: "Email", name: "email", id: "email", onChange: handleFormOnChange }), !formStateStatus.email && (_jsx("p", { className: "email-validator", children: "Email is required" })), _jsxs("div", { className: "show-password", children: [_jsx("input", { name: "password", id: "password", type: showPassword ? "text" : "password", placeholder: "Password", onChange: handleFormOnChange, value: formDetails.password }), _jsxs(Button, { size: "small", variant: "link", color: "primary", type: "button", onClick: function () { return setShowPassword(function (prev) { return !prev; }); }, children: [showPassword ? "HIDE" : "SHOW", " "] })] }), !formStateStatus.password && (_jsx("p", { className: "password-validator", children: "Enter an password" })), _jsx(Button, { size: "small", variant: "link", color: "primary", type: "button", className: "forgot-password", children: "FORGOT PASSWORD?" }), _jsx(Button, { onClick: handleFormSubmit, color: "primary", size: "small", type: "submit", variant: "block", children: "LOG IN" })] }) })] }));
 };
 export default Login;

@@ -1,4 +1,3 @@
-import React from "react";
 import "./user.scss";
-declare const User: () => React.JSX.Element;
+declare const User: () => import("react/jsx-runtime").JSX.Element;
 export default User;

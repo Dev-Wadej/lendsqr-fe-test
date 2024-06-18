@@ -1,5 +1,5 @@
-import React from "react";
+import { jsx as _jsx } from "react/jsx-runtime";
 import "./index.scss";
 export default function Progressbar() {
-    return React.createElement("div", { className: "loader" });
+    return _jsx("div", { className: "loader" });
 }

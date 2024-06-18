@@ -1,3 +1,2 @@
-import React from "react";
 import "./index.scss";
-export default function DashboardLayout(): React.JSX.Element;
+export default function DashboardLayout(): import("react/jsx-runtime").JSX.Element;

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./user.scss";
 import usePersistedState from "@/hooks/usePersistedState";
@@ -125,48 +126,7 @@ var User = function () {
         },
     ];
     if (loading)
-        return (React.createElement("div", { className: "user-loader-section" },
-            React.createElement(Progressbar, null)));
-    return (React.createElement("div", null,
-        React.createElement("section", { className: "user-details-section" },
-            React.createElement("div", { onClick: handleNavigationUser, className: "user-details-arrow-back", style: { cursor: "pointer" } },
-                React.createElement("span", null,
-                    React.createElement("img", { src: arrowBack, alt: "Icon" })),
-                React.createElement("span", null, "Back to Users")),
-            React.createElement("div", { className: "user-details-header" },
-                React.createElement("h3", null, "User Details"),
-                React.createElement("dl", null,
-                    React.createElement(Button, { color: "danger", variant: "outline" }, "BLACKLIST USER"),
-                    React.createElement(Button, { color: "primary", variant: "outline" }, "ACTIVATE USER"))),
-            React.createElement("div", { className: "user-top-details-wrapper" },
-                React.createElement("section", { className: "user-details-top" },
-                    React.createElement("aside", { className: "user-details-avatar-wrapper" },
-                        React.createElement("span", { className: "avatar-img" },
-                            React.createElement("img", { src: (_v = userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.profile) === null || _v === void 0 ? void 0 : _v.avatar, alt: "User Avatar" })),
-                        React.createElement("div", null,
-                            React.createElement("h4", null, (_w = userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.profile) === null || _w === void 0 ? void 0 :
-                                _w.firstName,
-                                " ", (_x = userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.profile) === null || _x === void 0 ? void 0 :
-                                _x.lastName),
-                            React.createElement("span", null, userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.accountNumber))),
-                    React.createElement("aside", { className: "user-tier" },
-                        React.createElement("h3", null, "User's Tier"),
-                        React.createElement("span", null,
-                            React.createElement("img", { src: starFilled, alt: "Icon" }),
-                            React.createElement("img", { src: starUnfilled, alt: "Icon" }),
-                            React.createElement("img", { src: starUnfilled, alt: "Icon" }))),
-                    React.createElement("aside", { className: "user-numerics" },
-                        React.createElement("h4", null, "\u20A6200,000.00"),
-                        React.createElement("p", null, "9912345678/Providus Bank"))),
-                React.createElement("section", { className: "user-tab" },
-                    React.createElement("button", { className: "active" }, "General Details"),
-                    buttonWords.map(function (btnword) { return (React.createElement("button", null, btnword)); }))),
-            React.createElement("section", { className: "user-heavy-info" },
-                React.createElement("aside", { className: "user-personal-info" }, user_details === null || user_details === void 0 ? void 0 : user_details.map(function (details, idx) { return (React.createElement(React.Fragment, null,
-                    React.createElement("h5", null, details.name),
-                    React.createElement("div", null, details.details.map(function (details_for_user, idx) { return (React.createElement("dl", null,
-                        React.createElement("div", { className: "user-name" }, details_for_user.title),
-                        React.createElement("div", null, details_for_user.title_details))); })),
-                    (details === null || details === void 0 ? void 0 : details.details.length) !== idx && React.createElement("hr", null))); }))))));
+        return (_jsx("div", { className: "user-loader-section", children: _jsx(Progressbar, {}) }));
+    return (_jsx("div", { children: _jsxs("section", { className: "user-details-section", children: [_jsxs("div", { onClick: handleNavigationUser, className: "user-details-arrow-back", style: { cursor: "pointer" }, children: [_jsx("span", { children: _jsx("img", { src: arrowBack, alt: "Icon" }) }), _jsx("span", { children: "Back to Users" })] }), _jsxs("div", { className: "user-details-header", children: [_jsx("h3", { children: "User Details" }), _jsxs("dl", { children: [_jsx(Button, { color: "danger", variant: "outline", children: "BLACKLIST USER" }), _jsx(Button, { color: "primary", variant: "outline", children: "ACTIVATE USER" })] })] }), _jsxs("div", { className: "user-top-details-wrapper", children: [_jsxs("section", { className: "user-details-top", children: [_jsxs("aside", { className: "user-details-avatar-wrapper", children: [_jsx("span", { className: "avatar-img", children: _jsx("img", { src: (_v = userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.profile) === null || _v === void 0 ? void 0 : _v.avatar, alt: "User Avatar" }) }), _jsxs("div", { children: [_jsxs("h4", { children: [(_w = userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.profile) === null || _w === void 0 ? void 0 : _w.firstName, " ", (_x = userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.profile) === null || _x === void 0 ? void 0 : _x.lastName] }), _jsx("span", { children: userCredentials === null || userCredentials === void 0 ? void 0 : userCredentials.accountNumber })] })] }), _jsxs("aside", { className: "user-tier", children: [_jsx("h3", { children: "User's Tier" }), _jsxs("span", { children: [_jsx("img", { src: starFilled, alt: "Icon" }), _jsx("img", { src: starUnfilled, alt: "Icon" }), _jsx("img", { src: starUnfilled, alt: "Icon" })] })] }), _jsxs("aside", { className: "user-numerics", children: [_jsx("h4", { children: "\u20A6200,000.00" }), _jsx("p", { children: "9912345678/Providus Bank" })] })] }), _jsxs("section", { className: "user-tab", children: [_jsx("button", { className: "active", children: "General Details" }), buttonWords.map(function (btnword) { return (_jsx("button", { children: btnword })); })] })] }), _jsx("section", { className: "user-heavy-info", children: _jsx("aside", { className: "user-personal-info", children: user_details === null || user_details === void 0 ? void 0 : user_details.map(function (details, idx) { return (_jsxs(_Fragment, { children: [_jsx("h5", { children: details.name }), _jsx("div", { children: details.details.map(function (details_for_user) { return (_jsxs("dl", { children: [_jsx("div", { className: "user-name", children: details_for_user.title }), _jsx("div", { children: details_for_user.title_details })] })); }) }), (details === null || details === void 0 ? void 0 : details.details.length) !== idx && _jsx("hr", {})] })); }) }) })] }) }));
 };
 export default User;

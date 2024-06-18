@@ -24,7 +24,7 @@ const UserTableAction = ({
   return (
     <section ref={ref} className="user-table-action">
       <div>
-        <Link to={id}>
+        <Link to={id} id="table-action">
           <span>
             <img src={eyes} alt="Eye icon" />
           </span>

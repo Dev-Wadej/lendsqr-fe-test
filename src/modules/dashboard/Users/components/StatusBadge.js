@@ -1,4 +1,4 @@
-import React from "react";
+import { jsx as _jsx } from "react/jsx-runtime";
 import "./index.scss";
 var status = [
     { title: "Active", color: "#39CD62", backgroundColor: "#F3FCF6" },
@@ -13,5 +13,5 @@ var randomStatusValue = function () {
 };
 export default function StatusBadge() {
     var _a = randomStatusValue(), backgroundColor = _a.backgroundColor, color = _a.color, title = _a.title;
-    return (React.createElement("span", { style: { color: color, backgroundColor: backgroundColor }, className: "status-badge" }, title));
+    return (_jsx("span", { style: { color: color, backgroundColor: backgroundColor }, className: "status-badge", children: title }));
 }

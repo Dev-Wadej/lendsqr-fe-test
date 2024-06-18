@@ -28,7 +28,7 @@ export var sidebar = [
     {
         title: "customers",
         links: [
-            { id: "active", icons: Users, name: "Users", path: "/dashboard/users" },
+            { id: "active", icons: Users, name: "Useers", path: "/dashboard/users" },
             {
                 icons: Guarantors,
                 name: "Guarantors",

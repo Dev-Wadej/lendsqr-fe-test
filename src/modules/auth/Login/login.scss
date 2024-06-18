@@ -20,7 +20,20 @@
                     grid-template-columns: repeat(2, minmax(0, 1fr));
                     place-items: center;
                     height:100vh;
+                    margin: 0 1rem;
                     
+
+                      @media only screen and (max-width: 900px) {
+                        & {
+                             grid-template-columns: repeat(1, minmax(0, 1fr));
+                              height:60vh;
+                        }
+                    }
+                      @media only screen and (max-width: 500px) {
+                        & {
+                               margin: 0 .5rem;
+                        }
+                    }
                      section:nth-child(1) {
                         height: 100%;
                         width: 100%;
@@ -30,6 +43,18 @@
                       section:nth-child(1)>img {
                        width: 10rem;
                        padding: 2rem;
+                          @media only screen and (max-width: 500px) {
+                        & {
+                             padding: 2rem 0;
+                        }
+                    }
+                    }
+                      section:nth-child(2) {
+                          @media only screen and (max-width: 500px) {
+                        & {
+                             width: 100%;
+                        }
+                    }
                     }
                      .login-img {  
                         display: flex; 
@@ -39,7 +64,12 @@
                             height: 100%;
                             object-fit: contain;
                         }
+                        @media only screen and (max-width: 900px) {
+                        & {
+                            display: none;
+                        }}
                 }
+              
                    
                 }
                 
@@ -85,10 +115,14 @@
                     input {
                         display: block;
                         width: 23rem;
-                        padding: .7rem;
+                        padding: .9rem .7rem;
                         margin-top: 1.5rem;
                         border: 1.5px solid rgba(84, 95, 125, 0.15);
                         border-radius: .3rem;
+                        @media only screen and (max-width: 500px) {
+                        & {
+                            width: 94%;
+                        }}
                     }
                     input::placeholder {
                         color: rgba(84, 95, 125, .6);

@@ -7,7 +7,7 @@ import companyLogo from "@/assets/svgs/companyLogo.svg"
 import loginIllustrator from "@/assets/images/loginPage.jpg"
 import { Button } from "@/components/button"
 
-const navigate_to = "/dashboard/user"
+const navigate_to = "/dashboard/users"
 const Login = () => {
   const navigate = useNavigate()
   const [formDetails, setFormDetails] = useState({ password: "", email: "" })
@@ -55,6 +55,7 @@ const Login = () => {
             type="email"
             placeholder="Email"
             name="email"
+            id="email"
             onChange={handleFormOnChange}
           />
           {!formStateStatus.email && (
@@ -64,6 +65,7 @@ const Login = () => {
           <div className="show-password">
             <input
               name="password"
+              id="password"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
               onChange={handleFormOnChange}

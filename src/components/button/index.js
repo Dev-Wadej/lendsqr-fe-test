@@ -20,13 +20,13 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import React from "react";
+import { jsx as _jsx } from "react/jsx-runtime";
 import "./button.scss";
 var Button = function (_a) {
     var _b = _a.color, color = _b === void 0 ? "primary" : _b, _c = _a.variant, variant = _c === void 0 ? "block" : _c, _d = _a.size, size = _d === void 0 ? "medium" : _d, children = _a.children, _e = _a.className, className = _e === void 0 ? "" : _e, buttonProps = __rest(_a, ["color", "variant", "size", "children", "className"]);
     var colorClass = "btn-".concat(color);
     var variantClass = "btn-".concat(variant);
     var sizeClass = "btn-".concat(size);
-    return (React.createElement("button", __assign({}, buttonProps, { className: "btn ".concat(sizeClass, " ").concat(colorClass, " \n        ").concat(variantClass, " ").concat(className !== null && className !== void 0 ? className : "") }), children));
+    return (_jsx("button", __assign({}, buttonProps, { className: "btn ".concat(sizeClass, " ").concat(colorClass, " \n        ").concat(variantClass, " ").concat(className !== null && className !== void 0 ? className : ""), children: children })));
 };
 export { Button };
