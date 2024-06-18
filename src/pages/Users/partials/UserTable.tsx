@@ -40,7 +40,16 @@ export default function UserTable() {
 
   const users = useMemo(() => data ?? [], [data])
 
-  const { firstContentIndex, lastContentIndex } = usePagination({
+  const {
+    gaps,
+    nextPage,
+    page,
+    prevPage,
+    setPage,
+    totalPages,
+    firstContentIndex,
+    lastContentIndex,
+  } = usePagination({
     contentPerPage: 9,
     count: users?.length,
   })
@@ -120,7 +129,15 @@ export default function UserTable() {
         </Table>
       </div>
 
-      <UserPagination dataLength={users?.length} />
+      <UserPagination
+        gaps={gaps}
+        nextPage={nextPage}
+        page={page}
+        prevPage={prevPage}
+        setPage={setPage}
+        totalPages={totalPages}
+        dataLength={users?.length}
+      />
     </section>
   )
 }

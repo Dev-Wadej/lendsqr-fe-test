@@ -8,20 +8,27 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/pagination"
-import usePagination from "@/hooks/usePaginate"
+import usePagination, { Gap } from "@/hooks/usePaginate"
 
 type Props = {
   dataLength: number
+  totalPages: number
+  nextPage: () => void
+  prevPage: () => void
+  setPage: (num: number) => void
+  page: number
+  gaps: Gap
 }
 const numberPerpage = 9
-export default function UserPagination({ dataLength }: Props) {
-  const { gaps, nextPage, page, prevPage, setPage, totalPages } = usePagination(
-    {
-      contentPerPage: 9,
-      count: dataLength,
-    }
-  )
-
+export default function UserPagination({
+  gaps,
+  nextPage,
+  page,
+  prevPage,
+  setPage,
+  totalPages,
+  dataLength,
+}: Props) {
   const jumpTopageArray = Array.from(
     { length: Math.floor(dataLength / numberPerpage) },
     () => numberPerpage
