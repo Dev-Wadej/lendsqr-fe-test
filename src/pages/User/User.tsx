@@ -132,7 +132,7 @@ const User = () => {
     },
   ]
 
-  if (loading)
+  if (loading && !userCredentials)
     return (
       <div className="user-loader-section">
         <Progressbar />

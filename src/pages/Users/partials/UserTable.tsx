@@ -19,6 +19,7 @@ import usePagination from "@/hooks/usePaginate"
 import UserTableAction from "../components/UserTableActions"
 import UserFormFilter from "../components/UserFormFilter"
 import UserPagination from "../components/UserPagination"
+import { useNavigate } from "react-router"
 
 const headerText = [
   "ORGANIZATION",
@@ -31,6 +32,7 @@ const headerText = [
 ]
 
 export default function UserTable() {
+  const navigate = useNavigate()
   const { data, loading } = useFetch<QueryUserRes>()
 
   const [opeTableAction, setOpenTbleAction] = useState(false)
@@ -86,7 +88,13 @@ export default function UserTable() {
           </TableHeader>
           <TableBody>
             {users?.slice(firstContentIndex, lastContentIndex)?.map((user) => (
-              <TableRow key={user.id} className="user-table-row">
+              <TableRow
+                key={user.id}
+                className="user-table-row"
+                onClick={() => {
+                  navigate(user?.id)
+                }}
+              >
                 <TableCell className="user-table-cell p-5">
                   {user.orgName}
                 </TableCell>
@@ -109,7 +117,8 @@ export default function UserTable() {
                   <button
                     className="rotate-90"
                     id="status"
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.stopPropagation()
                       setOpenTbleAction((prev) => !prev)
                       setClickedRowId(user?.id)
                     }}
