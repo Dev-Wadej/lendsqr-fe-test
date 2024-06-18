@@ -6,7 +6,7 @@ import usersWithSavings from "@/assets/svgs/userswithsavings.svg"
 
 import "./users.scss"
 import UserDashboardBox from "./components/UserDashboardBox"
-import UserTable from "./components/UserTable"
+import UserTable from "./partials/UserTable"
 
 const boxesProperties = [
   { name: "USERS", icon: users, amount: "2,453" },

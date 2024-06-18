@@ -13,12 +13,10 @@
     padding-bottom: 1rem;
     z-index: 50;
     background-color: var(--white);
-    transition: all 2s;
     @media only screen and (max-width: 1000px) {
         & {
             overflow-x: hidden;
              margin-top: 2rem;
-            animation: slideintoView 2s;
         }
     }
     .sidebar-top {
@@ -132,11 +130,3 @@
    
 }
 
-@keyframes slideIntoView {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
-}
