@@ -4,14 +4,7 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "strict": false,
-    "baseUrl": ".",
-    "jsx": "react-jsx",
-    "lib": ["ES2020", "DOM", "DOM.Iterable", "ES2020.Promise"],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts", "src"]
+  "include": ["vite.config.ts"]
 }
