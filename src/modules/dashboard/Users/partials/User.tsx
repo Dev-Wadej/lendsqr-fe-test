@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
 import "./user.scss"
@@ -202,7 +202,7 @@ const User = () => {
               <>
                 <h5>{details.name}</h5>
                 <div>
-                  {details.details.map((details_for_user, idx) => (
+                  {details.details.map((details_for_user) => (
                     <dl>
                       <div className="user-name">{details_for_user.title}</div>
                       <div>{details_for_user.title_details}</div>

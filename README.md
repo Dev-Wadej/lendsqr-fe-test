@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+![Logo](src/assets/images/Company.jpg)
+# Lendsqr
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lendsqr is a cloud-based, lending platform designed for small and medium-sized lenders, providing smart features at a zero upfront cost. It's a really sophisticated and easy to use app ensuring lenders manage their risk to the minimal level and reduce inefficiencies.
 
-Currently, two official plugins are available:
+Click [Here🚀🚀](https://adeniyijoshua-lendsqr-fe-test.vercel.app/) to have a feel of the user interface
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+Clone down this repository. You will need node and npm installed globally on your machine to be able to have access to this.
 
-## Expanding the ESLint configuration
+Installation:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+  git clone https://github.com/Jplayskeys/Lendsqr.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the project directory:
+
+ ` cd lendsqr`
+
+
+Install dependencies:
+
+ ` npm install`
+
+
+Start the server:
+
+  `npm run start`
+
+
+

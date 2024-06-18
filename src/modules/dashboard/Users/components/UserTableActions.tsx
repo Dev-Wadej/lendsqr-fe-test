@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 
 import blacklist from "@/assets/svgs/blacklistuser.svg"
 import activateUser from "@/assets/svgs/activateuser.svg"

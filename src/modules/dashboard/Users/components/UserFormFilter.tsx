@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import "./index.scss"
 import useClickOutside from "@/hooks/useClickOutside"
 
@@ -12,6 +12,9 @@ const UserFormFilter = ({ closeModal }: Props) => {
   }
   const ref = useRef<HTMLFormElement>(null)
   const clicked = useClickOutside(ref, closeModal)
+  useEffect(() => {
+    console.log("here")
+  }, [clicked])
 
   return (
     <form className="form-dropdown" ref={ref}>

@@ -1,10 +1,8 @@
-import React from "react"
-
 import users from "@/assets/svgs/users.svg"
 import activeUsers from "@/assets/svgs/activeusers.svg"
 import usersWithLoan from "@/assets/svgs/userswithloan.svg"
 import usersWithSavings from "@/assets/svgs/userswithsavings.svg"
-import dropDown from "@/assets/svgs/dropdown.svg"
+// import dropDown from "@/assets/svgs/dropdown.svg"
 
 import "./users.scss"
 import UserDashboardBox from "./components/UserDashboardBox"

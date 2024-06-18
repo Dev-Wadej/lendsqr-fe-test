@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, FC } from "react"
+import { ButtonHTMLAttributes, FC } from "react"
 import "./button.scss"
 
 // add more button colors here and style in the module
