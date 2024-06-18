@@ -80,9 +80,10 @@ gap: 1rem;
 }
 .user-table-footer{
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  margin: 0 2rem;
   margin-top: 1rem;
   .pagination {
     font-weight: 400;
