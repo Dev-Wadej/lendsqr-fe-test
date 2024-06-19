@@ -281,13 +281,7 @@
             border: 1px solid rgba(33, 63, 125, 0.06);
             box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
             border-radius: 4px;
-            // @media only screen and (min-width: 1500px) {
-            //     & {
-            //         max-width: 100rem;
-            //         display: grid;
-            //         place-content: center;
-            //     }
-            // }
+         
             hr {
                 border: .06px solid #e8eaf1;
                 position: relative;
@@ -324,10 +318,10 @@
                 grid-column-gap: 3rem;
                 grid-row-gap: 2rem;
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(10rem, 10rem));
                 @media only screen and (max-width: 800px) {
                     & {
-                        grid-column-gap: 2.3rem;
+                        grid-column-gap: 1.5rem;
                         grid-row-gap: 1.6rem;
                     }
                 }
